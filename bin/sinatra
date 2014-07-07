@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'thor'
+
+require_relative "../lib/sinatra_generator"
+
+SinatraGenerator::CLI.start  
+
+
+
