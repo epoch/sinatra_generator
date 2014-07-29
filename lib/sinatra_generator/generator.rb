@@ -57,7 +57,7 @@ module SinatraGenerator
         directory "#{Generator.source_root}/templates/public", "#{folder_name}/public"
 
         if options[:views]
-          insert_into_file "#{folder_name}/views/layout.erb", '<link rel="stylesheet" href="/stylesheets/main.css">',
+          insert_into_file "#{folder_name}/views/layout.erb", "\n  <link rel='stylesheet' href='/stylesheets/main.css'>",
             :after => '<title>Hello World</title>'
         end
       end

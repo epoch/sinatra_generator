@@ -38,6 +38,7 @@ class CLI < MiniTest::Unit::TestCase
     SinatraGenerator::CLI.start ['new','blog', '-v']
     Dir.chdir 'blog' do
       assert File.directory?('views'), 'views not found'
+      assert_includes File.read('main.rb'), "erb: index"
       Dir.chdir 'views' do
         assert_equal File.read('index.erb'), File.read("#{@templates_path}/index.erb")
       end
@@ -52,8 +53,7 @@ class CLI < MiniTest::Unit::TestCase
       assert File.directory?('views'), 'views not found'
 
       Dir.chdir 'views' do
-        assert_match /<link rel="stylesheet" href="\/stylesheets\/main.css">/, File.read('layout.erb')
-        # assert_includes File.read('layout.erb'), '<link rel="stylesheet" href="/stylesheets/main.css">'
+        assert_match /\n\s\s<link rel='stylesheet' href='\/stylesheets\/main.css'>/, File.read('layout.erb')
       end      
     end
   end  
