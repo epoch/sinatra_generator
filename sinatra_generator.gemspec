@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["tsui.daniel@gmail.com"]
   spec.summary       = %q{Generate a simple hello world sinatra app}
   spec.description   = %q{Intended as a quick demo on how to make a ruby gem. Generate a simple hello world sinatra app}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/epoch/sinatra_generator"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
