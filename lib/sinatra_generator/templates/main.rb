@@ -1,4 +1,4 @@
-<%- options[:views] ? @view = 'erb: index' : @view = 'hello world' -%>
+<%- options[:views] ? @view = 'erb :index' : @view = 'hello world' -%>
 <%- if options[:modular] -%>
 require 'sinatra/base' 
 
