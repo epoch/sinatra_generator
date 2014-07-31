@@ -38,7 +38,7 @@ class CLI < MiniTest::Unit::TestCase
     SinatraGenerator::CLI.start ['new','blog', '-v']
     Dir.chdir 'blog' do
       assert File.directory?('views'), 'views not found'
-      assert_includes File.read('main.rb'), "erb: index"
+      assert_includes File.read('main.rb'), "erb :index"
       Dir.chdir 'views' do
         assert_equal File.read('index.erb'), File.read("#{@templates_path}/index.erb")
       end
