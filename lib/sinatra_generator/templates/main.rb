@@ -1,6 +1,6 @@
 <%- options[:views] ? @view = 'erb :index' : @view = "'hello world'" -%>
 <%- if options[:modular] -%>
-require 'sinatra/base' 
+require 'sinatra/base'  
 
 class HelloWorld < Sinatra::Base
   get '/' do
@@ -11,6 +11,10 @@ end
 <%- else -%>     
 require 'sinatra'
 
+<%- end -%>
+<%- if options[:reloader] -%>
+  require 'sinatra/reloader'
+<%- end -%>
 get '/' do
   <%= @view %>
 end

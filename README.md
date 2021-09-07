@@ -19,6 +19,7 @@ Install it yourself as:
     -v, [--views=VIEWS]        # include views folder, index.erb and layout.erb
     -a, [--assets=ASSETS]      # include public, javascripts and stylesheets folder
     -p, [--procfile=PROCFILE]  # include Procfile
+    -r, [--reloader=RELOADER]  # include the sinatra/reloader in the main.rb
 
 ## example
 

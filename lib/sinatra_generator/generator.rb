@@ -11,7 +11,8 @@ module SinatraGenerator
     class_option :modular, aliases: "-m", desc: "modular style. Inherits from Sinatra::Base"
     class_option :views, aliases: "-v", desc: "include views folder, index.erb and layout.erb"
     class_option :assets, aliases: "-a", desc: "include public, javascripts and stylesheets folder" 
-    class_option :procfile, aliases: "-p", desc: "include Procfile" 
+    class_option :procfile, aliases: "-p", desc: "include Procfile"
+    class_option :reloader, aliases: "-r", desc: "include Reloader" 
 
     def self.source_root
       File.dirname(__FILE__)
